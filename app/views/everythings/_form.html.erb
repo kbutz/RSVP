@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-<%= f.input :name %>
-<%= f.input :friday, as: :boolean, boolean_style: :inline %>
-<%= f.input :friday_lodging %>
-<%= f.input :ceremony, boolean_style: :inline  %>
-<%= f.input :reception, boolean_style: :inline  %>
-<%= f.input :saturday_lodging %>
+<%= f.input :name, label: "Here, you can let us know the names your guest(s)." %>
+<%= f.input :friday, label: "Will you be joining us for our Friday evening Barbecue/Rehearsal dinner?", boolean_style: :inline %>
+<%= f.input :friday_lodging, label: "Where will you be staying Friday night? We have ample camping available!" %>
+<%= f.input :ceremony, label: "Will you be attending the Ceremony?", boolean_style: :inline  %>
+<%= f.input :reception, label: "Will you be attending our Reception?", boolean_style: :inline  %>
+<%= f.input :saturday_lodging, label: "Where will be staying Saturday night? If you need help with accomodations, let us know!" %>
 <div class="col-centered center"><%= f.button :submit, "RSVP!" %></div>
 
 <% end %>
