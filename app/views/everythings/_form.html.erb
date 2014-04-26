@@ -1,0 +1,22 @@
+<%= simple_form_for @everything do |f| %>
+  <% if @everything.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@everything.errors.count, "error") %> prohibited this everything from being saved:</h2>
+
+      <ul>
+      <% @everything.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= f.input :name %>
+<%= f.input :friday, as: :boolean, boolean_style: :inline %>
+<%= f.input :friday_lodging %>
+<%= f.input :ceremony, boolean_style: :inline  %>
+<%= f.input :reception, boolean_style: :inline  %>
+<%= f.input :saturday_lodging %>
+<div class="col-centered center"><%= f.button :submit, "RSVP!" %></div>
+
+<% end %>

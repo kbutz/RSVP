@@ -1,0 +1,35 @@
+<h1>Listing everythings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Friday</th>
+      <th>Friday lodging</th>
+      <th>Ceremony</th>
+      <th>Reception</th>
+      <th>Saturday lodging</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @everythings.each do |everything| %>
+      <tr>
+        <td><%= everything.name %></td>
+        <td><%= everything.friday %></td>
+        <td><%= everything.friday_lodging %></td>
+        <td><%= everything.ceremony %></td>
+        <td><%= everything.reception %></td>
+        <td><%= everything.saturday_lodging %></td>
+        <td><%= link_to 'Show', everything %></td>
+        <td><%= link_to 'Edit', edit_everything_path(everything) %></td>
+        <td><%= link_to 'Destroy', everything, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Everything', new_everything_path %>

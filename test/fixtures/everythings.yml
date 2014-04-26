@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  friday: false
+  friday_lodging: MyText
+  ceremony: false
+  reception: false
+  saturday_lodging: MyText
+
+two:
+  name: MyString
+  friday: false
+  friday_lodging: MyText
+  ceremony: false
+  reception: false
+  saturday_lodging: MyText

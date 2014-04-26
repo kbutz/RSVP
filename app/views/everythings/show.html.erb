@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @everything.name %>
+</p>
+
+<p>
+  <strong>Friday:</strong>
+  <%= @everything.friday %>
+</p>
+
+<p>
+  <strong>Friday lodging:</strong>
+  <%= @everything.friday_lodging %>
+</p>
+
+<p>
+  <strong>Ceremony:</strong>
+  <%= @everything.ceremony %>
+</p>
+
+<p>
+  <strong>Reception:</strong>
+  <%= @everything.reception %>
+</p>
+
+<p>
+  <strong>Saturday lodging:</strong>
+  <%= @everything.saturday_lodging %>
+</p>
+
+<%= link_to 'Edit', edit_everything_path(@everything) %> |
+<%= link_to 'Back', everythings_path %>
