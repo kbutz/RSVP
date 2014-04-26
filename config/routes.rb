@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :guests
   resources :everythings
 
   # The priority is based upon order of creation: first created -> highest priority.
