@@ -1,10 +1,13 @@
 <p id="notice"><%= notice %></p>
-
+<div class="rsvp_form col-centered center">
 <p>
   <strong>Name:</strong>
-  <%= @everything.name %>
+  <%= @everything.guest.full_name %>
 </p>
-
+<p>
+  <strong>Your Guests:</strong>
+  <%= @everything.your_friends %>
+</p>
 <p>
   <strong>Friday:</strong>
   <%= @everything.friday %>
@@ -29,6 +32,6 @@
   <strong>Saturday lodging:</strong>
   <%= @everything.saturday_lodging %>
 </p>
-
+</div>
 <%= link_to 'Edit', edit_everything_path(@everything) %> |
 <%= link_to 'Back', everythings_path %>

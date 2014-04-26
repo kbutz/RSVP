@@ -69,6 +69,6 @@ class EverythingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def everything_params
-      params.require(:everything).permit(:name, :friday, :friday_lodging, :ceremony, :reception, :saturday_lodging)
+      params.require(:everything).permit(:guest_id, :your_friends, :friday, :friday_lodging, :ceremony, :reception, :saturday_lodging, :first_name)
     end
 end

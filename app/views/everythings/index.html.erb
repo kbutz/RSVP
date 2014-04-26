@@ -16,7 +16,8 @@
   <tbody>
     <% @everythings.each do |everything| %>
       <tr>
-        <td><%= everything.name %></td>
+        <td><%= everything.guest.first_name %></td>
+        <td><%= everything.guest_id %></td>
         <td><%= everything.friday %></td>
         <td><%= everything.friday_lodging %></td>
         <td><%= everything.ceremony %></td>

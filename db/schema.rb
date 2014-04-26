@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426022356) do
+ActiveRecord::Schema.define(version: 20140426192128) do
 
   create_table "everythings", force: true do |t|
     t.boolean  "friday"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140426022356) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "guest_id"
+    t.text     "your_friends"
   end
 
   add_index "everythings", ["guest_id"], name: "index_everythings_on_guest_id"

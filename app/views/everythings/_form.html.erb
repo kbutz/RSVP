@@ -11,7 +11,8 @@
     </div>
   <% end %>
 
-<%= f.input :name, label: "Here, you can let us know the names your guest(s)." %>
+<%= f.input :guest_id, collection: Guest.all, label_method: :full_name %>
+<%= f.input :your_friends %>
 <%= f.input :friday, label: "Will you be joining us for our Friday evening Barbecue/Rehearsal dinner?", boolean_style: :inline %>
 <%= f.input :friday_lodging, label: "Where will you be staying Friday night? We have ample camping available!" %>
 <%= f.input :ceremony, label: "Will you be attending the Ceremony?", boolean_style: :inline  %>
