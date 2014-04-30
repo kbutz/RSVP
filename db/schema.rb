@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426192128) do
+ActiveRecord::Schema.define(version: 20140430213348) do
 
   create_table "everythings", force: true do |t|
     t.boolean  "friday"

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'guestpages/show'
+
   devise_for :guests
   
   devise_scope :guest do
@@ -9,9 +11,9 @@ Rails.application.routes.draw do
 
   resources :everythings
 
-  root to: "everythings#index"
+  root to: "everythings#new"
 
- 
+  get '/:id', to: 'guestpages#show'
 
 
   # authenticated :guest do

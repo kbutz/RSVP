@@ -1,0 +1,42 @@
+<div class="page-header">
+	<%= @guest.full_name %>
+</div>
+
+<% if @everythings %>
+	<%= @everythings.each do |everything| %>
+	<div class="rsvp_form col-centered center">
+		<p>
+		  <strong>Name:</strong>
+		  <%= everything.guest.full_name %>
+		</p>
+		<p>
+		  <strong>Your Guests:</strong>
+		  <%= everything.your_friends %>
+		</p>
+		<p>
+		  <strong>Friday:</strong>
+		  <%= everything.friday %>
+		</p>
+
+		<p>
+		  <strong>Friday lodging:</strong>
+		  <%= everything.friday_lodging %>
+		</p>
+
+		<p>
+		  <strong>Ceremony:</strong>
+		  <%= everything.ceremony %>
+		</p>
+
+		<p>
+		  <strong>Reception:</strong>
+		  <%= everything.reception %>
+		</p>
+
+		<p>
+		  <strong>Saturday lodging:</strong>
+		  <%= everything.saturday_lodging %>
+		</p>
+	</div>
+	<% end %>
+<% end %>

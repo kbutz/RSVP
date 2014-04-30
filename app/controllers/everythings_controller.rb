@@ -1,5 +1,5 @@
 class EverythingsController < ApplicationController
-  before_filter :authenticate_guest!, only: [:new]
+  before_filter :authenticate_guest!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_everything, only: [:show, :edit, :update, :destroy]
 
 
