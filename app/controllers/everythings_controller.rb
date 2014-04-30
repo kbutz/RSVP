@@ -1,5 +1,7 @@
 class EverythingsController < ApplicationController
+  before_filter :authenticate_guest!, only: [:new]
   before_action :set_everything, only: [:show, :edit, :update, :destroy]
+
 
   # GET /everythings
   # GET /everythings.json

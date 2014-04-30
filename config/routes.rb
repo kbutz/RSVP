@@ -1,6 +1,26 @@
 Rails.application.routes.draw do
   devise_for :guests
+  
+  devise_scope :guest do
+    get 'register', to: 'devise/registrations#new', as: 'register'
+    get 'login', to: 'devise/sessions#new', as: 'login'
+  end
+
+
   resources :everythings
+
+  root to: "everythings#index"
+
+ 
+
+
+  # authenticated :guest do
+  # root to: "everythings#new", as: :authenticated_root
+  # end
+
+  # unauthenticated do
+  # root to: "everythings#new"
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -56,5 +76,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  root 'everythings#index'
+
 end
