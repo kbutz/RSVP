@@ -43,4 +43,5 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
