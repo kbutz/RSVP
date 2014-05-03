@@ -1,12 +1,12 @@
-def create_user_and_log_in
-  @user = Guest.create \
+def create_guest_and_log_in
+  @guest = Guest.create \
     email:    'foo@example.com',
     password: 'asdfasd'
 
   visit login_path
 
-  fill_in 'Email',    with: @user.email
-  fill_in 'Password', with: @user.password
+  fill_in 'Email',    with: @guest.email
+  fill_in 'Password', with: @guest.password
 
   click_button 'Sign in'
 end
@@ -28,7 +28,7 @@ Then(/^I should see "(.*?)"$/) do |text|
 end
 
 Given(/^I'm logged in$/) do
-  create_user_and_log_in
+  create_guest_and_log_in
 end
 
 When(/^I check "(.*?)"$/) do |checkbox|
@@ -40,4 +40,5 @@ When(/^I press "(.*?)"$/) do |button|
 end
 
 Given(/^I've already RSVP'd$/) do
+
 end

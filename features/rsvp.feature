@@ -1,6 +1,6 @@
-Feature: User RSVP Management
+Feature: Guest RSVP Management
 
-  Scenario: New user signs up 
+  Scenario: New guest signs up 
     When I visit the root path
     And I click "RSVP"
     And I fill in "First name" with "Brad"
@@ -12,7 +12,7 @@ Feature: User RSVP Management
     And I click "Sign up"
     Then I should see "Welcome! You have signed up successfully."
 
-  Scenario: User RSVP's
+  Scenario: Guest RSVP's
     Given I'm logged in
     When I visit the root path
     And I fill in "Your friends" with "Kyle Butz"
@@ -20,7 +20,7 @@ Feature: User RSVP Management
     And I press "RSVP!"
     Then I should see "Thank you! Your RSVP has been received."
 
-  Scenario: Existing user signs in and updates RSVP
+  Scenario: Existing guest signs in and updates RSVP
     Given I'm logged in
     And I've already RSVP'd
     When I visit the root path
