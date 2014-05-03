@@ -1,7 +1,7 @@
 Feature: User RSVP Management
 
   Scenario: New user signs up 
-    When I visit the site
+    When I visit the root path
     And I click "RSVP"
     And I fill in "First name" with "Brad"
     And I fill in "Last name" with "Chase"
@@ -23,7 +23,6 @@ Feature: User RSVP Management
   Scenario: Existing user signs in and updates RSVP
     Given I'm logged in
     And I've already RSVP'd
-    When I visit the site
     When I visit the root path
     And I click ""
     # TODO ...
