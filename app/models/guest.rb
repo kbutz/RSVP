@@ -11,7 +11,7 @@ class Guest < ActiveRecord::Base
   validates :email, presence:true,
                     uniqueness: true
 
-  has_many :everything
+  has_many :everythings
 
   def full_name
   	first_name + " " + last_name	

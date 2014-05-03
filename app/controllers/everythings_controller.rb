@@ -26,7 +26,7 @@ class EverythingsController < ApplicationController
   # POST /everythings
   # POST /everythings.json
   def create
-    @everything = Everything.new(everything_params)
+    @everything = current_guest.everythings.new(everything_params)
 
     respond_to do |format|
       if @everything.save
