@@ -24,4 +24,5 @@ Feature: Guest RSVP Management
     Given I'm logged in
     And I've already RSVP'd
     When I visit the root path
+    And I click "Update your RSVP"
     # TODO ...
