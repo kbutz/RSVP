@@ -17,7 +17,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><%= current_guest.full_name %>'s RSVP</a>
+      <a class="navbar-brand" href="#"><% if guest_signed_in? %>
+        <%= current_guest.full_name %>'s RSVP
+        <% else %>RSVP
+        <% end %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
