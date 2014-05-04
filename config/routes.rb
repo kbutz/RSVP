@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :everythings
 
-  root to: "everythings#new"
+  root to: "everythings#index"
 
   get '/:id', to: 'guestpages#show'
 

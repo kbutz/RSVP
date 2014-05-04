@@ -1,12 +1,12 @@
 class EverythingsController < ApplicationController
-  before_filter :authenticate_guest!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_guest!, only: [:index, :new, :create, :edit, :update, :destroy]
   before_action :set_everything, only: [:show, :edit, :update, :destroy]
 
 
   # GET /everythings
   # GET /everythings.json
   def index
-    @everythings = Everything.all
+    @everythings = current_guest.everythings.all
   end
 
   # GET /everythings/1
@@ -30,7 +30,7 @@ class EverythingsController < ApplicationController
 
     respond_to do |format|
       if @everything.save
-        format.html { redirect_to @everything, notice: 'Everything was successfully created.' }
+        format.html { redirect_to @everything, notice: 'Your RSVP was successfully created.' }
         format.json { render :show, status: :created, location: @everything }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class EverythingsController < ApplicationController
   def update
     respond_to do |format|
       if @everything.update(everything_params)
-        format.html { redirect_to @everything, notice: 'Everything was successfully updated.' }
+        format.html { redirect_to @everything, notice: 'Your RSVP was successfully updated.' }
         format.json { render :show, status: :ok, location: @everything }
       else
         format.html { render :edit }

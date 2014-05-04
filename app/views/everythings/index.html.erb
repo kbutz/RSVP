@@ -1,36 +1,47 @@
-<h1>Listing everythings</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Friday</th>
-      <th>Friday lodging</th>
-      <th>Ceremony</th>
-      <th>Reception</th>
-      <th>Saturday lodging</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @everythings.each do |everything| %>
+<div class="rsvp_form col-centered center">
+    <p>
+      <h3><%= everything.guest.full_name %>'s RSVP</h3>
+    </p>
+    <hr>
+    <p>
+      <strong>Your Guests:</strong>
+      <%= everything.your_friends %>
+    </p>
+    <p>
+      <strong>Friday:</strong>
+      <%= everything.friday %>
+    </p>
 
-  <tbody>
-    <% @everythings.each do |everything| %>
-      <tr>
-        <td><%= everything.guest.first_name %></td>
-        <td><%= everything.guest_id %></td>
-        <td><%= everything.friday %></td>
-        <td><%= everything.friday_lodging %></td>
-        <td><%= everything.ceremony %></td>
-        <td><%= everything.reception %></td>
-        <td><%= everything.saturday_lodging %></td>
-        <td><%= link_to 'Show', everything %></td>
-        <td><%= link_to 'Edit', edit_everything_path(everything) %></td>
-        <td><%= link_to 'Destroy', everything, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <p>
+      <strong>Friday lodging:</strong>
+      <%= everything.friday_lodging %>
+    </p>
+
+    <p>
+      <strong>Ceremony:</strong>
+      <%= everything.ceremony %>
+    </p>
+
+    <p>
+      <strong>Reception:</strong>
+      <%= everything.reception %>
+    </p>
+
+    <p>
+      <strong>Saturday lodging:</strong>
+      <%= everything.saturday_lodging %>
+    </p>
+    <p>
+      <%= link_to 'Show', everything %> |
+      <%= link_to 'Edit', edit_everything_path(everything) %> |
+      <%= link_to 'Destroy', everything, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>
+  
+<% end %>
 
 <br>
 
-<%= link_to 'New Everything', new_everything_path %>
+<%= link_to 'New RSVP', new_everything_path %>

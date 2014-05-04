@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"></p>
 <div class="rsvp_form col-centered center">
 <p>
   <strong>Name:</strong>
@@ -32,6 +32,9 @@
   <strong>Saturday lodging:</strong>
   <%= @everything.saturday_lodging %>
 </p>
+<p>
+  <%= link_to 'Edit', edit_everything_path(@everything) %> |
+  <%= link_to 'Back', everythings_path %>
+</p>
 </div>
-<%= link_to 'Edit', edit_everything_path(@everything) %> |
-<%= link_to 'Back', everythings_path %>
+
